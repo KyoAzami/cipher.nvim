@@ -5,7 +5,7 @@ end
 
 local dashboard = require("alpha.themes.dashboard")
 
--- Texto fijo (siempre presente arriba)
+-- Fixed text (always present at the top)
 local fixed_ascii = {
   " ██████╗██╗██████╗ ██╗  ██╗███████╗██████╗        ██████╗ ",
   "██╔════╝██║██╔══██╗██║  ██║██╔════╝██╔══██╗      ██╔═████╗",
@@ -15,7 +15,7 @@ local fixed_ascii = {
   " ╚═════╝╚═╝╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝       ╚═════╝ ",
 }
 
--- Función para obtener arte ASCII aleatorio
+-- Function to obtain random ASCII art
 local function get_random_ascii()
   local ascii_dir = vim.fn.stdpath("config") .. "/lua/config/ascii/"
   local files = vim.fn.globpath(ascii_dir, "*.txt", false, true)
@@ -41,7 +41,7 @@ local function get_random_ascii()
   return lines
 end
 
--- Generar encabezado final: fijo + arte random
+-- Generate final header + ASCII art
 local function generate_header()
   local combined = vim.deepcopy(fixed_ascii)
   vim.list_extend(combined, { "" }) -- espacio
@@ -49,7 +49,7 @@ local function generate_header()
   return combined
 end
 
--- Establece valores visuales
+-- Set virtual values 
 dashboard.section.header.opts = {
   position = "center",
   hl = "AlphaHeader"
@@ -73,7 +73,7 @@ dashboard.section.buttons.val = {
 -- Configurar Alpha pero regenerando el header en cada ejecución
 alpha.setup(dashboard.config)
 
--- Regenerar header en cada VimEnter
+-- Regenerate the header every time you enter nvim
 vim.api.nvim_create_autocmd("User", {
   pattern = "AlphaReady",
   callback = function()

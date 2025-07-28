@@ -1,9 +1,9 @@
 local M = {}
 
--- Ruta donde se guarda el tema seleccionado
+-- File path where themes are stored
 local theme_file = vim.fn.stdpath("config") .. "/.colortheme"
 
--- Lista de temas disponibles (debe coincidir con los nombres del setup de cada tema)
+-- List of aviable themes  
 local themes = {
   "yorumi",
   "catppuccin",
@@ -18,16 +18,16 @@ local themes = {
   "tokyonight",
 }
 
--- Función para aplicar un tema
+-- Function for apply a theme 
 local function apply_theme(theme)
-  -- Protege el comando colorscheme por si el tema falla
+  -- Protect the colorscheme command if the change fails
   local ok, _ = pcall(vim.cmd.colorscheme, theme)
   if not ok then
     vim.notify("Error loading theme: " .. theme, vim.log.levels.ERROR)
   end
 end
 
--- Leer el tema actual desde el archivo de configuración
+-- Read the current theme from the configuration file
 local function get_current_theme()
   local f = io.open(theme_file, "r")
   if not f then return nil end
@@ -36,7 +36,7 @@ local function get_current_theme()
   return theme
 end
 
--- Guardar el tema seleccionado
+-- Save the selected theme 
 local function save_theme(theme)
   local f = io.open(theme_file, "w")
   if not f then
@@ -47,7 +47,7 @@ local function save_theme(theme)
   f:close()
 end
 
--- Función principal para seleccionar el tema
+-- Main function for selecting the theme
 function M.select_theme()
   local original_theme = get_current_theme() or "default"
   apply_theme(original_theme)
@@ -63,14 +63,14 @@ function M.select_theme()
       save_theme(choice)
       vim.notify("Tema aplicado: " .. choice, vim.log.levels.INFO)
     else
-      -- Restaurar tema anterior si se cancela
+      -- Restore previous theme if canceled
       apply_theme(original_theme)
       vim.notify("Selección cancelada. Tema restaurado.", vim.log.levels.WARN)
     end
   end)
 end
 
--- Aplicar automáticamente el tema guardado en cada inicio
+-- Automatically apply the saved theme at each startup
 function M.apply_saved_theme()
   local theme = get_current_theme()
   if theme then
