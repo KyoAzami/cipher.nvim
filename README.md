@@ -1,11 +1,14 @@
-# cipher-0 ⎘ NeoVim Configuration
+# cipher-0 ⎘ NeoVim configuration
 
+```
  ██████╗ 
 ██╔═████╗
 ██║██╔██║
 ████╔╝██║
 ╚██████╔╝
- ╚═════╝  
+ ╚═════╝ 
+         
+```
 
 *A minimalist yet powerful NeoVim configuration for modern development*
 
@@ -27,7 +30,7 @@
 - Git
 - A Nerd Font installed (recommended: [JetBrains Mono](https://www.jetbrains.com/lp/mono/))
 
-### Clone Repository
+### Clone Repository in the .config/nvim path
 
 #### Recommended (SSH):
 ```bash
