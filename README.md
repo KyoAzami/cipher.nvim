@@ -1,14 +1,13 @@
 # cipher-0 ⎘ NeoVim configuration
 
-```
- ██████╗ 
-██╔═████╗
-██║██╔██║
-████╔╝██║
-╚██████╔╝
- ╚═════╝ 
+ ██████╗  
+██╔═████╗  
+██║██╔██║  
+████╔╝██║  
+╚██████╔╝  
+ ╚═════╝  
          
-```
+
 
 *A minimalist yet powerful NeoVim configuration for modern development*
 
