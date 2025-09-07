@@ -27,7 +27,7 @@ mason_lspconfig.setup({
         'html', 'cssls', 'jsonls', 'yamlls', 'emmet_ls',
         'bashls', 'powershell_es',
         'sqlls', 'sqls',
-        'dockerls', 'terraformls', 'tflint', 'vimls'
+        'dockerls', 'terraformls', 'tflint', 'vimls', 'tectonic', 'texlab'
     },
     automatic_installation = true
 })
@@ -381,7 +381,35 @@ local servers = {
     tflint = {
         filetypes = { "terraform", "tf", "hcl" }
     },
-    vimls = {}
+    vimls = {},
+-- LaTeX / TeX / Markdown
+    texlab = {
+        settings = {
+            texlab = {
+                build = {
+                    executable = "tectonic",
+                    args = {
+                        "-X", "compile", "%f",
+                        "--synctex", "--keep-logs", "--keep-intermediates"
+                    },
+                    onSave = true,
+                    forwardSearchAfter = true
+                },
+                forwardSearch = {
+                    executable = "zathura", -- cámbialo si usas otro visor PDF
+                    args = { "--synctex-forward", "%l:1:%f", "%p" }
+                },
+                chktex = {
+                    onOpenAndSave = true,
+                    onEdit = true
+                },
+                latexindent = {
+                    modifyLineBreaks = true
+                }
+            }
+        },
+        filetypes = { "tex", "plaintex", "bib" }
+    },
 }
 
 -- Register each LSP server
