@@ -32,7 +32,7 @@ git clone git@github.com:KyoAzami/cipher.nvim.git ~/.config/nvim/
 
 **Alternative (HTTPS):**
 ```bash
-git clone [https://github.com/KyoAzami/cipher.nvim.git](https://github.com/KyoAzami/cipher.nvim.git) ~/.config/nvim
+git clone https://github.com/KyoAzami/cipher.nvim.git ~/.config/nvim
 ```
 
 ### 2. Install system Dependencies (Mason & LSP)
