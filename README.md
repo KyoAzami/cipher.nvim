@@ -18,7 +18,7 @@
 ### Prerequisites
 - **Neovim** ≥ 0.11.0
 - **Git**
-- A **Nerd Font** installed (recommended: [CaskaydiaCove Mono](https://www.jetbrains.com/lp/mono/))
+- A **Nerd Font** installed (recommended: [CaskaydiaCove Mono](https://github.com/microsoft/cascadia-code))
 
 ### 1. Clone the Repository
 
