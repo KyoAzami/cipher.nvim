@@ -3,7 +3,7 @@ local M = {}
 function M.setup(opts)
   require('tokyonight').setup({
     style = 'night',
-    transparent = opts.transparent,
+    transparent = true,
     sidebars = {
       'qf',
       'vista_kind',

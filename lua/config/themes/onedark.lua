@@ -3,7 +3,7 @@ local M = {}
 function M.setup(opts)
   require('onedark').setup({
     style = 'darker',
-    transparent = opts.transparent
+    transparent = true
   })
   vim.cmd.colorscheme('onedark')
 end

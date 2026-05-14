@@ -1,5 +1,4 @@
 -- lua/config/lsp.lua
-local lspconfig = require('lspconfig')
 local mason = require('mason')
 local mason_lspconfig = require('mason-lspconfig')
 local cmp_nvim_lsp = require('cmp_nvim_lsp')
@@ -27,7 +26,7 @@ mason_lspconfig.setup({
         'html', 'cssls', 'jsonls', 'yamlls', 'emmet_ls',
         'bashls', 'powershell_es',
         'sqlls', 'sqls',
-        'dockerls', 'terraformls', 'tflint', 'vimls', 'tectonic', 'texlab'
+        'dockerls', 'terraformls', 'tflint', 'vimls', 'texlab'
     },
     automatic_installation = true
 })
@@ -419,7 +418,7 @@ for server, config in pairs(servers) do
         on_attach = on_attach,
     }, config or {})
 
-    lspconfig[server].setup(final_config)
+    vim.lsp.config[server].setup(final_config)
 end
 
 -- Diagnostics configuration

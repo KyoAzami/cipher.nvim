@@ -2,7 +2,7 @@ local M = {}
 
 function M.setup(opts)
   require('kanagawa').setup({
-    transparent = opts.transparent,
+    transparent = true,
     colors = {
       theme = {
         all = {

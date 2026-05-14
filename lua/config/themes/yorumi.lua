@@ -2,7 +2,7 @@ local M = {}
 
 function M.setup(opts)
   require('yorumi').setup({
-    transparent_background = opts.transparent
+    transparent_background = true
   })
   vim.cmd.colorscheme('yorumi')
 end

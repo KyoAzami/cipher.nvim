@@ -3,7 +3,7 @@ local M = {}
 function M.setup(opts)
   require('catppuccin').setup({
     flavour = 'mocha',
-    transparent_background = opts.transparent,
+    transparent_background = true,
     integrations = {
       cmp = true,
       telescope = true,

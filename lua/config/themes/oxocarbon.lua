@@ -2,7 +2,7 @@ local M = {}
 
 function M.setup(opts)
   vim.opt.background = 'dark'
-  vim.g.oxocarbon_lua_transparent = opts.transparent
+  vim.g.oxocarbon_lua_transparent = true
   vim.cmd.colorscheme('oxocarbon')
 end
 

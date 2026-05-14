@@ -3,7 +3,7 @@ local M = {}
 function M.setup(opts)
   require('nightfox').setup({
     options = {
-      transparent = opts.transparent
+      transparent = true
     }
   })
   vim.cmd.colorscheme('nightfox')

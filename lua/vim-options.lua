@@ -26,4 +26,4 @@ vim.opt.fillchars = { eob = " " }
 -- Disable the creation of swap files
 vim.opt.swapfile = false
 
-
+vim.opt.clipboard = 'unnamedplus'

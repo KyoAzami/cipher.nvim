@@ -19,7 +19,7 @@ return {
   { "nyoom-engineering/oxocarbon.nvim" }, -- IBM Carbon inspired
   { "shaunsingh/solarized.nvim" }, -- Perfect color contrast
   { "folke/tokyonight.nvim" }, -- Tokyo night colors
-
+  { "xiyaowong/transparent.nvim" }, -- Plugin de transparencia
   -------------------------------------------------------------------------------
   --  Core Essentials
   -------------------------------------------------------------------------------
@@ -43,10 +43,10 @@ return {
   -------------------------------------------------------------------------------
   --  Search & Navigation
   -------------------------------------------------------------------------------
-  { "nvim-telescope/telescope.nvim", tag = "0.1.5", dependencies = "nvim-lua/plenary.nvim" }, -- Fuzzy finder
+  { "nvim-telescope/telescope.nvim", branch = "master", dependencies = "nvim-lua/plenary.nvim" }, -- Fuzzy finder
   { "sindrets/diffview.nvim", event = "VeryLazy" }, -- Git diff viewer
   { "ThePrimeagen/harpoon", event = "VeryLazy" }, -- File bookmarking
-  { "ggandor/leap.nvim", event = "VeryLazy" }, -- Quick jumping
+  { "https://codeberg.org/andyg/leap.nvim", event = "VeryLazy" }, -- Quick jumping
 
   -------------------------------------------------------------------------------
   -- 󰌢 Development - LSP & Completion

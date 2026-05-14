@@ -37,3 +37,15 @@ vim.keymap.set("n", "<leader>tm", function()
   require("config.theme-selector").select_theme()
 end, { desc = "Cambiar tema de colores" })
 
+------------------------------------------------------------------
+--  Telescope
+------------------------------------------------------------------
+local status, builtin = pcall(require, "telescope.builtin")
+
+if status then
+    -- Solo definimos los atajos si Telescope se cargó correctamente
+    vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope Find Files' })
+    vim.keymap.set('n', '<leader>fw', builtin.current_buffer_fuzzy_find, { desc = 'Telescope Current Buffer' })
+else
+    print("Telescope no encontrado, atajos ff y fw deshabilitados")
+end
