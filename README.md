@@ -37,9 +37,9 @@ git clone [https://github.com/KyoAzami/cipher.nvim.git](https://github.com/KyoAz
 
 ### 2. Install system Dependencies (Mason & LSP)
 
-To ensure that Mason (the package manager for Neovim) can properly compile and install Language Servers (like pyright, ts_ls, html, etc.), you need some basic system tools (Node.js, npm, Python, etc.).
+To ensure that Mason (the package manager for Neovim) can properly compile and install Language Servers (like `pyright`, `ts_ls`, `html`, etc.), you need some basic system tools (`Node.js`, `npm`, `Python`, etc.).
 
-We've included a script that automatically detects your Linux distribution (Arch, Debian/Ubuntu, Fedora, or openSUSE) and installs the required dependencies for you.
+We've included a script that automatically detects your Linux distribution (`Arch`, `Debian/Ubuntu`, `Fedora`, `or openSUSE`) and installs the required dependencies for you.
 
 ```bash
 cd ~/.config/nvim
@@ -55,4 +55,4 @@ Once the dependencies are installed, simply launch Neovim:
 nvim
 ```
 
-On the first run, lazy.nvim will automatically download and install all the required plugins, and Mason will begin setting up your language servers in the background. Grab a coffee, let it finish, and you're ready to code!
+On the first run, `lazy.nvim` will automatically download and install all the required plugins, and Mason will begin setting up your language servers in the background. Grab a coffee, let it finish, and you're ready to code!
